@@ -23,7 +23,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 		let BBCAlba =  Channel(name: "BBC Alba", URL:NSURL(string: "http://a.files.bbci.co.uk/media/live/manifesto/audio_video/simulcast/hls/uk/hls_tablet/llnw/bbc_alba.m3u8")!)
 		let S4C = Channel(name: "S4C", URL:NSURL(string:"http://a.files.bbci.co.uk/media/live/manifests/hls/tablet/ak/s4cpbs.m3u8")!)
 
-		channelsViewController.channels = [BBC1, BBC2, BBC3, BBC4, CBBC, CBeebies, News, Parliament, BBCAlba, S4C]
+		let ITV = Channel(name: "ITV", URL:NSURL(string:"http://itv1liveios-i.akamaihd.net/hls/live/203437/itvlive/ITV1MN/master_Main1800.m3u8")!)
+		let ITV2 = Channel(name: "ITV 2", URL:NSURL(string:"http://itv2liveios-i.akamaihd.net/hls/live/203495/itvlive/ITV2MN/master_Main1800.m3u8")!)
+		let ITVBe = Channel(name: "ITV Be", URL:NSURL(string:"http://itvbeliveios-i.akamaihd.net/hls/live/219078/itvlive/ITVBE/master_Main1800.m3u8")!)
+		let ITV3 = Channel(name: "ITV 3", URL:NSURL(string:"http://itv3liveios-i.akamaihd.net/hls/live/207262/itvlive/ITV3MN/master_Main1800.m3u8")!)
+		let ITV4 = Channel(name: "ITV 4", URL:NSURL(string:"http://itv4liveios-i.akamaihd.net/hls/live/207266/itvlive/ITV4MN/master_Main1800.m3u8")!)
+		let CITV = Channel(name: "CITV", URL:NSURL(string:"http://citvliveios-i.akamaihd.net/hls/live/207267/itvlive/CITVMN/master_Main1800.m3u8")!)
+
+		let channel4 = Channel(name: "Channel 4", URL:NSURL(string:"http://ak.live.hls.c4assets.com/hls/c4/master.m3u8")!)
+		let E4 = Channel(name: "E4", URL:NSURL(string:"http://ak.live.hls.c4assets.com/hls/e4/master.m3u8")!)
+		let more4 = Channel(name: "More4", URL:NSURL(string:"http://ak.live.hls.c4assets.com/hls/m4/master.m3u8")!)
+		let film4 = Channel(name: "Film4", URL:NSURL(string:"http://ak.live.hls.c4assets.com/hls/f4/master.m3u8")!)
+		let fourSeven = Channel(name: "4seven", URL:NSURL(string:"http://ak.live.hls.c4assets.com/hls/4s/master.m3u8")!)
+
+		channelsViewController.channels = [BBC1, BBC2, BBC3, BBC4, CBBC, CBeebies, News, Parliament, BBCAlba, S4C, ITV, ITV2, ITVBe, ITV3, ITV4, CITV, channel4, E4, more4, film4, fourSeven]
 
 		return true
 	}
