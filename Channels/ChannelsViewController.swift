@@ -11,14 +11,13 @@ class ChannelsViewController: UICollectionViewController {
 	}
 
 	override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-		print(channels.count)
 		return channels.count
 	}
 
 	override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
 
 		let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
-		print(cell)
+
 		guard let channelCell = cell as? ChannelCollectionViewCell else {
 			return cell
 		}
