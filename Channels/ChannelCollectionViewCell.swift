@@ -13,9 +13,5 @@ class ChannelCollectionViewCell: UICollectionViewCell {
 		}
 	}
 
-	@IBOutlet private var imageView: UIImageView? {
-		didSet {
-			imageView?.adjustsImageWhenAncestorFocused = true
-		}
-	}
+	@IBOutlet private var imageView: UIImageView?
 }
