@@ -10,13 +10,13 @@ class ChannelsViewController: UICollectionViewController {
 		}
 	}
 
-	override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+	override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 		return channels.count
 	}
 
-	override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+	override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
 
-		let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath)
+		let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "cell", for: indexPath)
 
 		guard let channelCell = cell as? ChannelCollectionViewCell else {
 			return cell
@@ -27,18 +27,18 @@ class ChannelsViewController: UICollectionViewController {
 		return channelCell
 	}
 
-	override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+	override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
 
 		let channel = channels[indexPath.item]
 
-		let player = AVPlayer(URL: channel.URL)
+		let player = AVPlayer(url: channel.URL)
 
 		let playerViewController = AVPlayerViewController()
-		playerViewController.modalTransitionStyle = .CrossDissolve
+		playerViewController.modalTransitionStyle = .crossDissolve
 		playerViewController.player = player
-		self.presentViewController(playerViewController, animated:true, completion:nil)
+		present(playerViewController, animated: true)
 
 		player.play()
-		player.closedCaptionDisplayEnabled = true;
+		player.isClosedCaptionDisplayEnabled = true;
 	}
 }
