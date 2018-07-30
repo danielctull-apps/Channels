@@ -4,7 +4,7 @@ import UIKit
 
 struct Channel {
 	let name: String
-	let URL: URL
+	let url: URL
 
 	var image: UIImage? {
 		return UIImage(named: name)

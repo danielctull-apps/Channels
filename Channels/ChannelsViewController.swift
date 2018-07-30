@@ -31,7 +31,7 @@ class ChannelsViewController: UICollectionViewController {
 
 		let channel = channels[indexPath.item]
 
-		let player = AVPlayer(url: channel.URL)
+		let player = AVPlayer(url: channel.url)
 
 		let playerViewController = AVPlayerViewController()
 		playerViewController.modalTransitionStyle = .crossDissolve
